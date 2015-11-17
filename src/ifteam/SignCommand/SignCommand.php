@@ -42,6 +42,7 @@ class SignCommand extends PluginBase implements Listener {
 					$this->getServer ()->getCommandMap ()->dispatch ( $event->getPlayer (), $text [1] );
 				}
 			}
+			$event->setCancelled ();
 		}
 	}
 	public function initMessage() {

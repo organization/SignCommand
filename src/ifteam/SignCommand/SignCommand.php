@@ -40,9 +40,9 @@ class SignCommand extends PluginBase implements Listener {
 				
 				if ($text [0] == $this->get ( "sign-message" )) {
 					$this->getServer ()->getCommandMap ()->dispatch ( $event->getPlayer (), $text [1] );
+					$event->setCancelled ();
 				}
 			}
-			$event->setCancelled ();
 		}
 	}
 	public function initMessage() {
